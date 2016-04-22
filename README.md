@@ -19,3 +19,14 @@ ApplicationTestCase – It provides testing for Application classes. It can be u
 
 ###### InstrumentationTestRunner
 – The runner that runs the Android test cases.
+
+###### InstrumentationTestCase
+
+A test case that has access to Instrumentation.
+
+###### AndroidTestCase
+
+Extend this if you need to access Resources or other things that depend on Activity Context.
+AndroidTestCase is pretty well summarized via that link you posted. InstrumentationTestCase is higher up the class hierarchy from ActivityInstrumentationTestCase2. It's heavier weight than a plain AndroidTestCase, but it only exposes an Instrumentation object and no Activity, limiting its usefulness.
+
+In reality, you'll probably never need this class, because it doesn't offer much (if any) performance advantage over ActivityInstrumentationTestCase2, which offers access to an Instrumentation object itself. In any case, if you want to know what you can do with an Instrumentation object, check out this or this.
