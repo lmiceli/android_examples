@@ -17,8 +17,8 @@ import static nl.qbusict.cupboard.CupboardFactory.cupboard;
  */
 public class PracticeDatabaseHelper extends SQLiteOpenHelper {
 
-    private static final String DATABASE_NAME = "cupboardTest.db";
-    private static final int DATABASE_VERSION = 1;
+    static final String DATABASE_NAME = "cupboardTest.db";
+    static final int DATABASE_VERSION = 1;
 
     public PracticeDatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
